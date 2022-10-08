@@ -6,7 +6,7 @@
 class ChainingHashing
 {
 public:
-	ChainingHashing(const unsigned& size, const unsigned& coef, const unsigned& Pr) :C(coef), 
+	ChainingHashing(const unsigned& size, const unsigned& coef, const unsigned& Pr = 0) :C(coef), 
 																					TableSize(size), 
 																					HashTable(new std::list<unsigned>[TableSize]),
 																					P(Pr)
@@ -35,13 +35,12 @@ private:
 
 	//}
 
-
+	//const unsigned P; // This is for universal hashing P should be PRIME and Bigger than expected key value
 
 	const unsigned C;
 	const unsigned TableSize;
 	std::list<unsigned>* HashTable;
 
-	//const unsigned P; // This is for universal hashing P should be PRIME and Bigger than expected key value
 };
 
 bool ChainingHashing::Insert(const unsigned& key)
