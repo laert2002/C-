@@ -7,9 +7,9 @@ class ChainingHashing
 {
 public:
 	ChainingHashing(const unsigned& size, const unsigned& coef, const unsigned& Pr) :C(coef), 
-																					TableSize(size), 
-																					HashTable(new std::list<unsigned>[TableSize]),
-																					P(Pr)
+											TableSize(size), 
+											HashTable(new std::list<unsigned>[TableSize]),
+											P(Pr)
 	{
 	}
 
