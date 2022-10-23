@@ -74,7 +74,7 @@ int DivideAndConquer::Partition(std::vector<int>& arr, const int& left, const in
 	const int& pivot = arr[right];
 	int index = left - 1;
 
-	for (int i = left; i <= right; i++)
+	for (int i = left; i < right; i++)
 	{
 		if (arr[i] <= pivot)
 			std::swap(arr[++index], arr[i]);
